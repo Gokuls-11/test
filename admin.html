@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+
+<title>
+
+    dashboard
+</title>
+
+</head>
+<body>
+    <hr>
+    <h1>
+        <center>Admin Dashboard</center>
+    </h1>
+    <hr>
+
+
+    <button onclick="c1()" style="background-color:rgb(96, 76, 211);">Invente 2026 </button>
+    <p id ="s1">registered  :</p>
+    <button onclick="c2()"style="background-color:rgb(27, 133, 45);">saraal 2026 </button>
+    <p id ="s2">registered  :</p>
+    <button onclick="c3()"style="background-color:rgb(196, 156, 28);">English club 2026 </button>
+    <p id ="s3">registered  :</p>
+    <button onclick="c4()"style="background-color:rgb(190, 57, 157);">art and music 2026 </button>
+    <p id ="s4">registered  :</p>
+
+
+</body>
+<script>
+
+
+function c1()
+{
+    let count = localStorage.getItem("count");
+    document.getElementById("s1").innerText = count;
+ 
+    
+}
+function c2()
+{
+    document.getElementById("s2").innerText = "registered  :" + events[1];
+    
+}
+function c3()
+{
+   
+    document.getElementById("s3").innerText = "registered  :" + events[2];
+   
+}
+function c4()
+{
+    
+    document.getElementById("s4").innerText = "registered  :" + events[3];
+    
+}
+
+
+</script>

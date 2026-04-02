@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+
+<title>
+Events
+</title>
+
+</head>
+<body>
+<hr>
+    <h1>
+        <center>Event Dashboard</center>
+    </h1>
+<hr>
+<br>
+<br>
+<label for="e1">Invente 2026       : </label>
+<button onclick="ce1()" style="background-color:green;">Book now</button>
+<p id ="s1"></p>
+
+<hr>
+<label for="e2">sarral 2026        : </label>
+<button onclick="ce2()" style="background-color:rgb(128, 0, 128);">Book now</button>
+<p id ="s2"></p>
+
+<hr>
+<label for="e3">English club 2026  : </label>
+<button onclick="ce3()" style="background-color:rgb(179, 168, 16);">Book now</button>
+<p id ="s3"></p>
+
+<hr>
+<label for="e4">Arts music 2026    :</label>
+<button onclick="ce4()" style="background-color:rgb(19, 0, 128);">Book now</button>
+<p id ="s4"></p>
+
+</body>
+<script>
+
+events=[0,0,0,0];
+function ce1()
+{
+
+    
+    events[0]+=1;
+    a=events[0];
+    document.getElementById("s1").innerText = "registered  : " + events[0];
+    localStorage.setItem("c1",a);
+    store();
+    
+}
+function ce2()
+{
+    events[1]+=1;
+    document.getElementById("s2").innerText = "registered  :" + events[1];
+    store();
+}
+function ce3()
+{
+    events[2]+=1;
+    document.getElementById("s3").innerText = "registered  :" + events[2];
+    store();
+}
+function ce4()
+{
+    events[3]+=1;
+    document.getElementById("s4").innerText = "registered  :" + events[3];
+    store();
+}
+
+function store(){
+
+                    
+                    
+}
+</script>

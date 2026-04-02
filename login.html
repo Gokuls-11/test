@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+    <head>
+        <title> login </title>
+
+    </head>
+    <body>
+
+            <center>
+                <h1>Login</h1>
+                <br><br><br><br><br><br><br><br>
+               
+                <hr>
+                <br><br><br>
+                <label for="user">Enter user name : </label>
+                
+                <input id="user" type="text" placeholder="Enter user name">
+                <br><br><br>
+                
+                <label for="pin" >Enter password  : </label>
+                <input id="pin"  type="number" placeholder="Enter pin 12345">
+                <br><br><br>
+
+                <button onclick="login()">Submit</button>
+                <p id = "status"></p>
+                <br><br><br>
+                <hr>
+
+            </center>
+            
+
+
+    </body>
+    <script>
+        function login(){
+
+           
+            let attempts=0;
+            let user=document.getelementById("user").value;
+            let password = parseInt(document.getElementById("pin").value);
+            document.getElementById("status").innerText="Invalid credientials";
+            if(user == "admin" && password == 1234 ){
+                
+                document.getElementById("status").innerText="admin";
+                window.location.href =  "admin.html"
+            
+
+            }
+            else{
+                if(user == "krish" && password =="2222" )
+                {
+
+                       window.location.href = "events.html";
+                }
+                else{
+
+                attempts+=1;
+                if(attempts >= 3){
+
+                    document.getElementById("status").innerText="limit 3 trail reached you are blocked";
+
+                }
+                document.getElementById("status").innerText="Invalid credientials";
+
+                }
+                
+
+            }
+
+
+        }
+    </script>
